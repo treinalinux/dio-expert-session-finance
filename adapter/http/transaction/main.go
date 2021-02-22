@@ -7,6 +7,7 @@ import (
 	"net/http"
 
 	"github.com/treinalinux/dio-expert-session-finance/model/transaction"
+	"github.com/treinalinux/dio-expert-session-finance/util"
 )
 
 // GetTransactions :
@@ -18,14 +19,12 @@ func GetTransactions(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-type", "application/json")
 
-	// "2006-01-02T15:04:05"
-
 	var transactions = transaction.Transactions{
 		transaction.Transaction{
 			Title:     "Salário",
 			Amount:    1200.8,
 			Type:      0,
-			CreatedAt: salaryReceived,
+			CreatedAt: util.StringToTime("2021-02-22T10:04:05"),
 		},
 	}
 
