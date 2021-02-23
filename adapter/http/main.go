@@ -8,7 +8,7 @@ import (
 	"github.com/treinalinux/dio-expert-session-finance/adapter/http/transaction"
 )
 
-// Init : Inicia o http
+// Init : Inicia nosso servidor http na porta 8080
 func Init() {
 
 	http.HandleFunc("/transactions", transaction.GetTransactions)

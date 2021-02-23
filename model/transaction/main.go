@@ -12,5 +12,5 @@ type Transaction struct {
 	CreatedAt time.Time `json:"creadted_at"`
 }
 
-// Transactions :
+// Transactions : Transaction Sendo chamada.
 type Transactions []Transaction

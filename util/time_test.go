@@ -2,7 +2,7 @@ package util
 
 import "testing"
 
-// TestStringToTime
+// TestStringToTime : testes usado para o time.
 func TestStringToTime(t *testing.T) {
 	var convertedTime = StringToTime("2021-02-21T10:19:05")
 

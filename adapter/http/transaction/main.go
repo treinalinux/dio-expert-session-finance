@@ -10,7 +10,7 @@ import (
 	"github.com/treinalinux/dio-expert-session-finance/util"
 )
 
-// GetTransactions :
+// GetTransactions : realiza um metodo get e impede a chamada de outros metodos.
 func GetTransactions(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "GET" {
 		w.WriteHeader(http.StatusMethodNotAllowed)
@@ -32,7 +32,7 @@ func GetTransactions(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// CreateATransactions :
+// CreateATransactions : realiza um metodo post e impede a chamada de outros metodos.
 func CreateATransactions(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "POST" {
 		w.WriteHeader(http.StatusMethodNotAllowed)

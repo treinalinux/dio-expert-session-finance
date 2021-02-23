@@ -5,12 +5,12 @@ import (
 	"net/http"
 )
 
-// HealthBody : Checa a saúde da aplicação
+// HealthBody : checa a saúde da aplicação.
 type HealthBody struct {
 	Status string `json:"status"`
 }
 
-// Health : saúde
+// Health : checa a saúde da aplicação e retorna o staus alive se estiver up.
 func Health(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "GET" {
 		w.WriteHeader(http.StatusMethodNotAllowed)
